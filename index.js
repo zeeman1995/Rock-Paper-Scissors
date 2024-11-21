@@ -1,20 +1,15 @@
 
-//Firstly list all the possible options avaliable in the game.
 const options = ["rock", "paper", "scissor"]
-// write the function for the computer choice
 function getComputerChoice(){
-//Manke the computer to choice to be done random.   
  const choice = options[Math.floor(Math.random() * options.length)];
  //Create a return for the computerchoice to return any of the options.
     return choice;
 }
-// check who is winning bwtween the playerSelection and the ComputerSelection.
 function checkWinners (playerSelection, ComputerSelection){
     //if the playerSelection is equal to the computerSelection return tie.
 if (playerSelection == ComputerSelection){
     return"Tie";
 }
-//else if the playerSelection is not equal to the computerSelection return the each options.
   else if(
     (playerSelection == "rock" && ComputerSelection == "scissor") ||
     (playerSelection == "scissor" && ComputerSelection == "paper") ||
@@ -26,7 +21,6 @@ if (playerSelection == ComputerSelection){
     return "Computer"
  }
 }
-//let create a function called playRound to know who win
 function playRound(playerSelection,computerSelection){
     const result = checkWinners(playerSelection,computerSelection); 
     if (result == "Tie"){
